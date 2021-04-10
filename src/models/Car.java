@@ -1,5 +1,8 @@
 package models;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Car {
 
     private String companyName, modeName, color, transmission, carType;
@@ -48,7 +51,12 @@ public class Car {
     }
 
     public void setTransmission(String transmission) {
-        this.transmission = transmission;
+
+        List<String> transmissions = Arrays.asList("gear","automatic");
+        if (transmissions.contains(transmission.toLowerCase()))
+            this.transmission = transmission;
+        else
+            throw new IllegalArgumentException(transmission + " is not an option, use: "+transmissions);
     }
 
     public String getCarType() {
@@ -56,7 +64,13 @@ public class Car {
     }
 
     public void setCarType(String carType) {
-        this.carType = carType;
+
+        List<String> carsType = Arrays.asList("sedan","sports", "hatchback", "convertible", "minivan", "wagon");
+        if (carsType.contains(carType.toLowerCase()))
+            this.carType = carType;
+        else
+            throw new IllegalArgumentException(carType + " is not an option, use: "+carsType);
+
     }
 
     public int getPrice() {
@@ -72,7 +86,11 @@ public class Car {
     }
 
     public void setSeats(int seats) {
-        this.seats = seats;
+
+        if(seats>=1 && seats<=10)
+            this.seats = seats;
+        else
+            throw new IllegalArgumentException("The cars seats must be between 1-10");
     }
 
     public double getMileage() {
