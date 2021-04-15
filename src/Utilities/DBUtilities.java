@@ -1,34 +1,35 @@
-package models;
+package Utilities;
+
+import models.Car;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class CarsList {
+public class DBUtilities {
+    private static ArrayList<Car> carList = new ArrayList<>();
 
-    private ArrayList<Car> carList;
-
-    public CarsList() {
-
-        this.carList = new ArrayList<>();
-    }
-
-    public void addCar()
+    public static ArrayList<Car> addCars()
     {
+        ArrayList<Car> cars = new ArrayList<>();
         Car car1 = new Car("Jaguar", "XJ5", "White", "Automatic", "Sedan", 100000, 4, 9.3, false);
         Car car2 = new Car("BMW", "M4", "Bue", "Automatic", "Convertible", 89000, 2, 6.8, false);
         Car car3 = new Car("Dodge", "Journey", "Black", "Gear", "Wagon", 15000, 7, 20.3, true);
         Car car4 = new Car("Ferrari", "812", "Red", "Automatic", "Sports", 340000, 2, 5.9, false);
         Car car5 = new Car("BMW", "X1", "White", "Gear", "Sedan", 52000, 4, 11.3, true);
 
+
         carList.add(car1);
         carList.add(car2);
         carList.add(car3);
         carList.add(car4);
         carList.add(car5);
+        cars = carList;
+        return cars;
     }
 
-    public ArrayList<Car> sortByCompany() {
+    public static ArrayList<Car> sortByCompany() {
         List<String> companyName = new ArrayList<>();
 
         for(int i=0; i<carList.size(); i++)
@@ -47,7 +48,7 @@ public class CarsList {
         return companyNameAsc;
     }
 
-    public ArrayList<Car> sortPriceAscending() {
+    public static ArrayList<Car> sortPriceAscending() {
         List<Integer> ascendingPrice = new ArrayList<>();
 
         for(int i=0; i<carList.size(); i++)
@@ -66,7 +67,7 @@ public class CarsList {
         return ascendingList;
     }
 
-    public ArrayList<Car> sortPriceDescending() {
+    public static ArrayList<Car> sortPriceDescending() {
         List<Integer> descendingPrice = new ArrayList<>();
 
         for(int i=0; i<carList.size(); i++)
@@ -84,4 +85,12 @@ public class CarsList {
         }
         return descendingList;
     }
+
+    public static ArrayList<String> getMajors()
+    {
+        ArrayList<String> majors = new ArrayList<>();
+        majors.addAll(Arrays.asList("Price Ascending","Price Descending","Company Name"));
+        return majors;
+    }
+
 }

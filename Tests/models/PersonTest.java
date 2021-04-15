@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PersonsTest {
+class PersonTest {
 
-    private Persons person;
+    private Person person;
 
     @BeforeEach
     void setUp() {
-        person = new Persons("Jeff", "Brown", "testemail@gamil.com", "1 Bedrock lane", "9872341456");
+        person = new Person("Jeff", "Brown", "testemail@gamil.com", "1 Bedrock lane", "9872341456");
     }
 
     @Test

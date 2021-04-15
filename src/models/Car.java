@@ -5,21 +5,21 @@ import java.util.List;
 
 public class Car {
 
-    private String companyName, modeName, color, transmission, carType;
+    private String companyName, modelName, color, transmission, carType;
     private int price, seats;
     private double mileage;
-    private boolean usage;
+    private boolean isNew;
 
-    public Car(String companyName, String modeName, String color, String transmission, String carType, int price, int seats, double mileage, boolean usage) {
+    public Car(String companyName, String modelName, String color, String transmission, String carType, int price, int seats, double mileage, boolean isNew) {
         setCompanyName(companyName);
-        setModeName(modeName);
+        setModelName(modelName);
         setColor(color);
         setTransmission(transmission);
         setCarType(carType);
         setPrice(price);
         setSeats(seats);
         setMileage(mileage);
-        setUsage(usage);
+        setisNew(isNew);
     }
 
     public String getCompanyName() {
@@ -30,12 +30,12 @@ public class Car {
         this.companyName = companyName;
     }
 
-    public String getModeName() {
-        return modeName;
+    public String getModelName() {
+        return modelName;
     }
 
-    public void setModeName(String modeName) {
-        this.modeName = modeName;
+    public void setModelName(String modeName) {
+        this.modelName = modeName;
     }
 
     public String getColor() {
@@ -101,12 +101,12 @@ public class Car {
         this.mileage = mileage;
     }
 
-    public boolean isUsage() {
-        return usage;
+    public boolean getisNew() {
+        return isNew;
     }
 
-    public void setUsage(boolean usage) {
-        this.usage = usage;
+    public void setisNew(boolean isNew) {
+        this.isNew = isNew;
     }
 
 

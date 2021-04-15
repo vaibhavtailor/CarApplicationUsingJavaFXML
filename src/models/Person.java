@@ -2,10 +2,10 @@ package models;
 
 import java.util.Locale;
 
-public class Persons {
+public class Person {
     private String firstName, lastName, email, address, contactNumber;
 
-    public Persons(String firstName, String lastName, String email, String address, String contactNumber) {
+    public Person(String firstName, String lastName, String email, String address, String contactNumber) {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
