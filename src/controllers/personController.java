@@ -57,30 +57,20 @@ public class personController implements Initializable {
 
     @FXML
     private void changeToNextScreen(ActionEvent event) throws IOException {
-        utilities.SceneChanger.changeScenes(event, "../views/carsDisplay.fxml","Cars");
+        Utilities.SceneChanger.changeScenes(event, "../views/carsDisplay.fxml","Cars");
     }
 
     @FXML
     private void nextButton()
     {
-        try {
-            Person newStudent = new Person(fNameField.getText(),
+        Person newStudent = new Person(fNameField.getText(),
                     lNameField.getText(),
                     emailField.getText(),
                     cNumField.getText(),
                     addField.getText());
 
-
-
-
             //Clear fields
             clearFields();
-        } catch (IllegalArgumentException exception)
-        {
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
     }
 
     private void clearFields()

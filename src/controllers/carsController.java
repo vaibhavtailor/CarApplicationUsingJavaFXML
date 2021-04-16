@@ -80,7 +80,6 @@ public class carsController implements Initializable {
         mileageColumn.setCellValueFactory(new PropertyValueFactory<>("mileage"));
         newColumn.setCellValueFactory(new PropertyValueFactory<>("isNew"));
 
-        System.out.println(DBUtilities.addCars());
         //load the data into the table
        carTableView.getItems().addAll(DBUtilities.addCars());
 
@@ -104,12 +103,12 @@ public class carsController implements Initializable {
 
     @FXML
     private void changeToPopup(ActionEvent event) throws IOException {
-        utilities.SceneChanger.changeScenes(event, "../views/Popup.fxml","Cars");
+        Utilities.SceneChanger.changeScenes(event, "../views/Popup.fxml","Cars");
     }
 
     @FXML
     private void changeToPrevious(ActionEvent event) throws IOException {
-        utilities.SceneChanger.changeScenes(event, "../views/person.fxml","Cars");
+        Utilities.SceneChanger.changeScenes(event, "../views/person.fxml","Cars");
     }
 
 
