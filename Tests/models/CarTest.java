@@ -11,7 +11,7 @@ class CarTest {
 
     @BeforeEach
     void setUp() {
-        cars = new Car ("BMW", "540i", "White", "Gear", "Sedan", 55000, 4, 10.2, false);
+        cars = new Car ("BMW", "540i", "White", "Gear", "Sedan", 55000, 4, 10.2);
     }
 
     @Test

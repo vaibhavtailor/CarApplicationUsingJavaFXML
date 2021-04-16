@@ -50,9 +50,6 @@ public class carsController implements Initializable {
     @FXML
     private TableColumn<Car, Double> mileageColumn;
 
-    @FXML
-    private TableColumn<Car, Boolean> newColumn;
-
 
     @FXML
     private ComboBox<String> sortComboBox;
@@ -78,7 +75,6 @@ public class carsController implements Initializable {
         seatColumn.setCellValueFactory(new PropertyValueFactory<>("seats"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         mileageColumn.setCellValueFactory(new PropertyValueFactory<>("mileage"));
-        newColumn.setCellValueFactory(new PropertyValueFactory<>("isNew"));
 
         //load the data into the table
        carTableView.getItems().addAll(DBUtilities.addCars());

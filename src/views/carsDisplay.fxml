@@ -3,20 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.carsController">
+<AnchorPane prefHeight="550.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.carsController">
    <children>
       <TableView fx:id="carTableView" layoutX="19.0" layoutY="206.0" prefHeight="200.0" prefWidth="569.0">
         <columns>
           <TableColumn fx:id="cNameColumn" prefWidth="77.0" text="Company" />
           <TableColumn fx:id="modelColumn" prefWidth="61.0" text="Model" />
-            <TableColumn fx:id="typeColumn" prefWidth="70.0" text="Car Type" />
+            <TableColumn fx:id="typeColumn" prefWidth="78.0" text="Car Type" />
             <TableColumn fx:id="colorColumn" prefWidth="52.0" text="Color" />
-            <TableColumn fx:id="transmissionColumn" prefWidth="106.0" text="Transmission" />
-            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="62.0" text="Price" />
-            <TableColumn fx:id="seatColumn" prefWidth="41.0" text="Seats" />
-            <TableColumn fx:id="mileageColumn" minWidth="0.0" prefWidth="65.0" text="Mileage" />
-            <TableColumn fx:id="newColumn" prefWidth="34.0" text="New" />
+            <TableColumn fx:id="transmissionColumn" prefWidth="107.0" text="Transmission" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="63.0" text="Price" />
+            <TableColumn fx:id="seatColumn" prefWidth="61.0" text="Seats" />
+            <TableColumn fx:id="mileageColumn" minWidth="0.0" prefWidth="69.0" text="Mileage" />
         </columns>
       </TableView>
       <ComboBox fx:id="sortComboBox" layoutX="380.0" layoutY="419.0" prefWidth="150.0" promptText="Sort" />
@@ -26,5 +26,14 @@
           </image> </ImageView>
       <Button fx:id="buyButton" layoutX="527.0" layoutY="508.0" mnemonicParsing="false" onAction="#changeToPopup" text="Buy Car" />
       <Button fx:id="backButton" layoutX="20.0" layoutY="508.0" mnemonicParsing="false" onAction="#changeToPrevious" text="Back" />
+      <Label layoutX="172.0" layoutY="89.0" prefHeight="31.0" prefWidth="197.0" text="CAR4U">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font></Label>
+      <Label layoutX="172.0" layoutY="132.0" text="Best cars at best price!!">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

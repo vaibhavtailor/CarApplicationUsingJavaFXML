@@ -8,9 +8,8 @@ public class Car {
     private String companyName, modelName, color, transmission, carType;
     private int price, seats;
     private double mileage;
-    private boolean isNew;
 
-    public Car(String companyName, String modelName, String color, String transmission, String carType, int price, int seats, double mileage, boolean isNew) {
+    public Car(String companyName, String modelName, String color, String transmission, String carType, int price, int seats, double mileage) {
         setCompanyName(companyName);
         setModelName(modelName);
         setColor(color);
@@ -19,7 +18,6 @@ public class Car {
         setPrice(price);
         setSeats(seats);
         setMileage(mileage);
-        setisNew(isNew);
     }
 
     public String getCompanyName() {
@@ -99,14 +97,6 @@ public class Car {
 
     public void setMileage(double mileage) {
         this.mileage = mileage;
-    }
-
-    public boolean getisNew() {
-        return isNew;
-    }
-
-    public void setisNew(boolean isNew) {
-        this.isNew = isNew;
     }
 
 
